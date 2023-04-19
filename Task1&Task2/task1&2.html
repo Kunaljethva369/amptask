@@ -1,0 +1,2150 @@
+<!doctype html><!-- This tells everyone that this is an AMP file. `<html amp>` works too -->
+<html ⚡>
+<!--Ref: https://amp.dev/documentation/guides-and-tutorials/learn/spec/amphtml/ --><!-- The charset definition must be the first child of the `<head>` tag -->
+
+<head>
+    <meta charset="utf-8"> <!-- The AMP runtime must be loaded as the second child of the `<head>` tag.-->
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+    <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <!--AMP HTML files require a canonical link pointing to the regular HTML. If no HTML version exists, it should point to itself -->
+    <link rel="canonical" href=".html">
+    <title></title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <!--CSS must be embedded inline-->
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+    </style> <noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
+    </noscript>
+    <style amp-custom>
+        .container {
+            padding: 0px 10px;
+        }
+
+        .container-accordian {
+            padding: 30px 10px;
+        }
+
+        .headingcompo1 {
+            text-align: center;
+            color: #8E8E8E;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 28px;
+        }
+
+        .orange-text {
+            color: #f58220;
+        }
+
+        .tools-slide {
+            background: #fff;
+            border: 1px solid rgba(151, 151, 151, 0.2);
+            border-radius: 20px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+            position: relative;
+            text-align: center;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            -ms-border-radius: 20px;
+            -o-border-radius: 20px;
+            margin-bottom: 20px;
+            transition: max-height 0.25s ease-out;
+        }
+
+        .tools-slide .caption h4 {
+            color: #0072bc;
+            font-family: AllianzSans;
+            margin: 20px 0 0;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 25px;
+        }
+
+        a {
+            text-decoration: none;
+            outline: 0;
+            color: #0062a8;
+            cursor: pointer;
+        }
+
+        .ba-plus-link {
+            position: absolute;
+            margin: 0 auto;
+            left: calc(50% - 41px);
+            bottom: 20px;
+            border: none;
+            background: none;
+        }
+
+        .accordianTitle {
+            display: block;
+            color: #fff;
+            font-size: 1.2rem;
+            padding: 10px;
+            margin: 10px 0;
+            float: left;
+            margin: 0;
+            background: #0072bc;
+        }
+
+        .accordianTitle:after {
+            content: '';
+            height: 8px;
+            width: 8px;
+            display: block;
+            border: 3px solid #fff;
+            border-top-width: 3px;
+            border-right-width: 3px;
+            border-top-width: 3px;
+            border-right-width: 3px;
+            border-right-width: 0;
+            border-top-width: 0;
+            top: 50%;
+            -webkit-transform: rotate(-45deg) translateY(-50%);
+            transform: rotate(-45deg) translateY(-50%);
+            -ms-transform: rotate(-45deg) translateY(-50%);
+            -o-transform: rotate(-45deg) translateY(-50%);
+            position: absolute;
+            right: 15px;
+            margin-top: -3px;
+        }
+
+        .accordianTitletx:before {
+            content: '';
+            height: 8px;
+            width: 8px;
+            display: block;
+            border: 3px solid #2ac9ff;
+            border-top-width: 3px;
+            border-right-width: 3px;
+            border-right-width: 0;
+            border-top-width: 0;
+            top: 50%;
+            -webkit-transform: rotate(-45deg) translateY(-50%);
+            -moz-transform: rotate(-45deg);
+            transform: rotate(136deg);
+            -ms-transform: rotate(-45deg) translateY(-50%);
+            -o-transform: rotate(-45deg) translateY(-50%);
+            position: absolute;
+            right: 15px;
+            margin-top: -3px;
+        }
+
+        .accordianTitletx {
+            color: #2ac9ff;
+            background: transparent;
+            border: none;
+            padding: 0.5rem 0.2rem;
+            font-size: 0.9rem;
+        }
+
+        .caracc {
+            padding: 0rem 0.2rem;
+        }
+
+        .heading {
+            font-size: 27px;
+        }
+
+        .tools-slide {
+            padding: 10px 15px;
+            max-height: 170px;
+            min-height: 160px;
+        }
+
+        .tools-slide-sec {
+            width: 75%;
+        }
+
+        .amp-carousel-button.amp-carousel-button-prev {
+            background: url(/leftarrow.svg) no-repeat 0 0;
+            border: none;
+            position: absolute;
+            left: -5px;
+        }
+
+        .amp-carousel-button.amp-carousel-button-next {
+            background: url(/nextarrow.svg) no-repeat 0 0;
+            border: none;
+            position: absolute;
+            right: -25px;
+        }
+
+        .ba-plus-link img {
+            position: fixed;
+            z-index: 99;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            padding: 0 10px;
+        }
+
+        .testimonials {
+            position: relative;
+            padding: 16px 0;
+            min-height: 605px;
+            content-visibility: auto;
+            contain-intrinsic-size: 0 605px;
+        }
+
+        .testimonials:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            background: #e3e3e3;
+            width: 100%;
+            height: 322px;
+        }
+
+        .testimonial-block {
+            background: #fff;
+            padding: 25px 0px 35px;
+            -webkit-box-shadow: 0px 0px 5px 0px rgba(161, 161, 161, 1);
+            -moz-box-shadow: 0px 0px 5px 0px rgba(161, 161, 161, 1);
+            box-shadow: 0px 0px 5px 0px rgba(161, 161, 161, 1);
+            text-align: center;
+            min-height: 490px;
+            height: 532px;
+            width: 90%;
+            margin: 0px auto;
+        }
+
+        .testimonial-block h3 {
+            font-size: 28px;
+            font-family: AllianzSansBold;
+            text-align: center;
+            text-transform: capitalize;
+            color: #9f9f9f;
+        }
+
+        .color-highlight-blue {
+            color: #0273bc;
+            display: block;
+        }
+
+        .testimonial-block .testimonial-img {
+            width: 180px;
+            margin: 30px auto 55px;
+            border-radius: 100px;
+            height: 180px;
+            position: relative;
+        }
+
+        .testimonial-img img {
+            width: 100%;
+        }
+
+        .testimonial-block .middle-part {
+            min-height: 105px;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .testimonials-block p {
+            text-align: center;
+            margin: 0 0 26px 0;
+            font-size: 16px;
+        }
+
+        .testimonial-btn {
+            margin: 0 auto;
+            display: table;
+        }
+
+        .btn {
+            background: #f89c30;
+            padding: 8px 15px;
+            min-width: auto;
+            border-radius: 50px;
+            color: #fff;
+            font-size: 1rem;
+            text-transform: uppercase;
+            float: left;
+            clear: both;
+            font-family: AllianzSansBold;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            text-align: center;
+            border: 1px solid #f89c30;
+        }
+
+        .play-btn {
+            position: relative;
+        }
+
+        .video-icons.video-links {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            display: block;
+            bottom: 55px;
+            margin-left: 60px;
+            background-image: url(/play.png);
+            width: 48px;
+            height: 48px;
+            background-repeat: no-repeat;
+            background-position: 4px -433px;
+        }
+
+        .youtubePlay {
+            display: block;
+            width: 90%;
+            margin: 0px auto;
+            margin-top: 6rem;
+        }
+
+        .close-icon {
+            position: absolute;
+            right: 9px;
+            top: 70px;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+
+        .secCar,
+        #secCar {
+            background: rgba(0, 0, 0, .7);
+        }
+
+        button {
+            border: none;
+        }
+
+        .btn button {
+            border: none;
+            background: none;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .text-link button {
+            font-size: 0.7rem;
+            background: none;
+            color: #0072bc;
+            text-transform: uppercase;
+            text-decoration: underline;
+        }
+
+        .testimonial-popup {
+            display: flex;
+            width: 90%;
+            margin: 0px auto;
+            margin-top: 4.5rem;
+            background-color: #fff;
+        }
+
+        .testimonial-popup .close-icon {
+            color: #fff;
+            font-size: 1.2rem;
+            top: 35px;
+            right: 30px;
+        }
+
+        .main-wrappopup h3 span {
+            display: inline;
+        }
+
+        .testimonial-popup h3 {
+            font-family: "AllianzSansBold";
+            color: #9f9f9f;
+            font-size: 30px;
+            text-align: center;
+            float: left;
+            width: 100%;
+            padding-bottom: 20px;
+        }
+
+        .testimonial-popup .content-part {
+            float: left;
+            width: 100%;
+            font-size: 0;
+        }
+
+        .testimonial-popup .left-part {
+            display: inline-block;
+            vertical-align: middle;
+            width: 30%;
+            margin: 0 auto;
+            text-align: center;
+            padding-right: 5%;
+        }
+
+        .testimonial-popup .left-part span {
+            display: block;
+            max-width: 130px;
+            height: auto;
+            margin: 0 auto 10px;
+        }
+
+        .testimonial-popup .left-part span img {
+            max-width: 100%;
+        }
+
+        .testimonial-popup .right-part {
+            display: inline-block;
+            vertical-align: middle;
+            width: 70%;
+        }
+
+        .testimonial-popup p {
+            color: #333;
+            font-size: 1rem;
+            line-height: 24px;
+        }
+
+        .amp-carousel-button-prev {
+            background: url(/prev.svg) no-repeat;
+            position: absolute;
+            left: -8px;
+        }
+
+        .amp-carousel-button-next {
+            background: url(/next.svg) no-repeat;
+            position: absolute;
+            right: -27px;
+        }
+
+        .amp-carousel-button:focus {
+            border: none;
+        }
+
+        .bg-blue {
+            background-color: #0072bc;
+            padding: 2rem 0rem;
+        }
+
+        .bg-blue-sec {
+            background: #0072bc;
+            padding: 2rem 0rem;
+        }
+
+        .section-header {
+            margin-bottom: 30px;
+        }
+
+        .text-white {
+            color: #fff;
+        }
+
+        .heading {
+            text-align: center;
+            color: white;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 27px;
+            margin: 0px;
+        }
+
+        .tapHeader {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .innerData [option] {
+            display: none
+        }
+
+        .innerData [option][selected] {
+            display: block;
+        }
+
+        .plans-nav {
+            position: relative;
+            color: #ffffff;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 18px;
+            max-width: 150px;
+            font-weight: bold;
+            border-radius: 10px;
+            margin-bottom: 10px
+        }
+
+        .icon-md {
+            width: 55px;
+            height: 55px;
+        }
+
+        .plans-nav[selected] {
+            background-color: #fff;
+        }
+
+        .icon-term-insurance {
+            background: url(/termins.svg) no-repeat left top;
+            margin: 0px auto 10px;
+            background-size: 100%;
+        }
+
+        .plans-nav p {
+            font-size: 12px;
+        }
+
+        .plans-nav[selected] p {
+            color: #0273bc;
+        }
+
+        .plans-nav:after[select] {
+            content: "";
+            position: absolute;
+            border-top: 12px solid #fff;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            bottom: -10px;
+            left: 0;
+            right: 0;
+            width: 0;
+            margin: 0 auto;
+        }
+
+        .plans-nav img {
+            width: 40px;
+            margin: 0 auto 0px;
+        }
+
+        .icon-ulip-plan {
+            background: url(/ulicolor.svg) no-repeat left top;
+            margin: 0px auto 10px;
+            background-size: 100%;
+        }
+
+        .icon-retirement-plan {
+            background: url(/retcolor.svg) no-repeat left top;
+            margin: 0px auto 10px;
+            background-size: 100%;
+        }
+
+        .icon-ulip-plan img,
+        .icon-retirement-plan img {
+            display: none;
+        }
+
+        .ba-view-all-white {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1rem;
+            margin: 20px;
+            text-decoration: underline;
+            text-transform: uppercase;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+        }
+
+        .plans-detials {
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 90%;
+            margin: 0 auto;
+            text-align: left;
+            background: #fff;
+        }
+
+        .plans-img {
+            width: 250px;
+            float: none;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .plans-detials-blk {
+            margin-top: 30px;
+            text-align: center;
+            float: none;
+        }
+
+        .plans-detials h3 {
+            color: #0072bc;
+            text-transform: capitalize;
+            font-size: 20px;
+        }
+
+        .plans-detials p {
+            width: 80%;
+            margin: 10px auto 0;
+        }
+
+        .ribbon-orange {
+            position: absolute;
+            display: inline-block;
+            vertical-align: middle;
+            background-color: #f58220;
+            font-size: 0.7rem;
+            color: #fff;
+            padding: 2px 10px;
+            right: -95px;
+            top: 6px;
+            left: 50%;
+            top: 175px;
+            margin-left: -30px;
+            right: auto;
+        }
+
+        .ribbon-orange:before {
+            content: '';
+            position: absolute;
+            height: 0;
+            width: 0;
+            border-style: solid;
+            border-width: 0;
+            border-color: #f58220 transparent;
+            left: -9px;
+            top: 0;
+            border-width: 9px 0 9px 9px;
+        }
+
+        .ribbon-orange:after {
+            content: '';
+            position: absolute;
+            height: 0;
+            width: 0;
+            border-style: solid;
+            border-width: 0;
+            border-color: #f58220 transparent;
+            top: 0;
+            right: -8px;
+            border-width: 9px 9px 9px 0;
+        }
+
+        .plans-detials .plans-check-list {
+            text-align: left;
+            width: 75%;
+            margin: 30px auto 0;
+        }
+
+        .plans-detials ul {
+            list-style: none;
+            padding-left: 0px;
+        }
+
+        .plans-detials ul li {
+            font-size: 14px;
+            line-height: 18px;
+            color: #655f5f;
+            margin-bottom: 2px;
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 10px;
+        }
+
+        .plans-detials ul li:after {
+            position: absolute;
+            content: "";
+            background: url(/check.svg) no-repeat 0 0;
+            width: 20px;
+            height: 20px;
+            left: 0;
+            top: 3px;
+        }
+
+        .plans-detials ul li.orange-text {
+            color: #f58220;
+        }
+
+        .plans-detials .but-group {
+            display: flex;
+            margin: 20px auto;
+            justify-content: space-around;
+        }
+
+        .btn {
+            background: #f89c30;
+            border-radius: 50px;
+            color: #fff;
+            text-transform: uppercase;
+            float: left;
+            clear: both;
+            font-family: AllianzSansBold;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            text-align: center;
+            border: 1px solid #f89c30;
+            font-size: 1rem;
+            padding: 8px 15px;
+            min-width: auto;
+        }
+
+        .ba_knowmore_link.btn {
+            min-width: auto;
+            background: transparent;
+            border: none;
+            clear: unset;
+            overflow: unset;
+            margin-top: 5px;
+            display: inline-block;
+            font-family: AllianzSans;
+            font-size: 12px;
+            color: #0072bc;
+            text-transform: uppercase;
+            text-decoration: underline;
+            font-style: normal;
+            font-weight: normal;
+        }
+
+        .header_wrapper {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #62cbf4;
+        }
+
+        .flex1 {
+            width: 35%;
+        }
+
+        .header_wrapper .logo {
+            position: relative;
+            width: 140px;
+            height: 51px;
+            top: 6%;
+            left: 8%;
+            padding-bottom: 10px;
+        }
+
+        .logo a img {
+            max-width: 70%;
+        }
+
+        .header-secondary {
+            display: flex;
+            width: 100%;
+            padding: 8px 0px 0px;
+            background: transparent;
+            position: relative;
+        }
+
+        .container-fluid {
+            padding: 0 10px;
+        }
+
+        header .navWrap {
+            background: transparent;
+        }
+
+        header .navWrap .pull-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .navWrap .pull-right .icon-links {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: end;
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+            list-style: none;
+            min-height: 38px;
+            margin: 0px;
+        }
+
+        .navWrap .pull-right .icon-links .nriIcon {
+            margin-right: 0px;
+            display: block;
+            /* width: 20%; */
+            padding-right: 5px;
+        }
+
+        .navWrap .pull-right .icon-links li {
+            padding: 15px 6px;
+        }
+
+        .icon {
+            position: relative;
+            cursor: pointer;
+            margin: 0px auto;
+            display: flex;
+        }
+
+        .icon-nri {
+            background: url(/nri.svg) no-repeat center center;
+        }
+
+        .icon-sm {
+            width: 25px;
+            height: 27px;
+        }
+
+        .navWrap .pull-right .icon-links>.loginIcon {
+            padding-right: 0px;
+            background: none;
+        }
+
+        .navWrap .icon-links li a .login-icon {
+            color: #0072bc;
+        }
+
+        .topIcon-info {
+            border: 1px solid #ddd;
+            width: 300px;
+            background: #fff;
+            padding: 0 10px;
+            position: absolute;
+            right: 0;
+            top: 69px;
+            text-align: left;
+            display: none;
+            z-index: 99;
+        }
+
+        .topIcon-info .customer-login {
+            right: -36px;
+            border: 1px solid #ddd;
+        }
+
+        .topIcon-info-show .closebtn {
+            right: 8px;
+            top: 0;
+            font-size: 3rem;
+            position: absolute;
+            cursor: pointer;
+            z-index: 5;
+        }
+
+        .topIcon-info-show ul {
+            width: 100%;
+            float: left;
+            padding-left: 0px;
+            list-style: none;
+        }
+
+        .navWrap .pull-right .icon-links li {
+            padding: 15px 6px;
+            position: relative;
+        }
+
+        .topIcon-info.customer-login ul li p {
+            font-size: 1.8rem;
+            color: #5f5f5f;
+            margin: 0px;
+        }
+
+        .topIcon-info-show ul li {
+            list-style: none;
+            border-bottom: 1px solid #e1e1e1;
+        }
+
+        .topIcon-info-show.customer-login ul li p {
+            font-size: 1.2rem;
+        }
+
+        .imgiconic-customer:before {
+            content: "";
+            width: 40px;
+            height: 40px;
+            display: block;
+            background: url(/play.png) -154px -209px;
+            position: absolute;
+            left: 5px;
+            top: 32%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        .topIcon-info-show .btnWrap {
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        .topIcon-info-show .imgiconic-customer,
+        .topIcon-info-show .imgiconic-partner {
+            padding: 10px 0 10px 60px;
+            margin: 0px;
+        }
+
+        .topIcon-info-show .btn {
+            display: inline-block;
+            vertical-align: middle;
+            float: none;
+            font-size: 0.8rem;
+            padding: 8px 30px;
+            min-width: inherit;
+            color: #fff;
+            text-transform: uppercase;
+            clear: both;
+            font-family: AllianzSansBold;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            text-align: center;
+            border: 1px solid #f89c30;
+        }
+
+        .topIcon-info-show .btnWrap .regbtn {
+            background: #fff;
+            color: #f89c30;
+            margin-left: 7px;
+        }
+
+        .imgiconic-partner:before {
+            content: "";
+            width: 40px;
+            height: 40px;
+            display: block;
+            background: url(/play.png) -154px -209px;
+            position: absolute;
+            left: 5px;
+            top: 32%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            background-position: -218px -273px;
+        }
+
+        .topIcon-info-show {
+            display: block;
+            border: 1px solid #ddd;
+            width: 300px;
+            background: #fff;
+            padding: 0 10px;
+            position: absolute;
+            right: 0;
+            top: 69px;
+            text-align: left;
+            z-index: 99;
+        }
+
+        .mobile-icon {
+            display: block;
+        }
+
+        .icon-hamburger {
+            background: url(/menu.svg) no-repeat center center;
+            top: 15px;
+            margin-left: 10px;
+        }
+
+        .navWrap nav {
+            position: fixed;
+            top: 0;
+            left: 100%;
+            bottom: 0;
+            width: 85%;
+            padding: 0 0 80px 0;
+            overflow-y: auto;
+            overflow-x: hidden;
+            transform: translateX(0);
+            -ms-transform: translateX(0);
+            -webkit-transform: translateX(0);
+            background: #fff;
+            z-index: 999;
+            transition: .35s all cubic-bezier(.65, .05, .36, 1);
+            -webkit-transition: .35s all cubic-bezier(.65, .05, .36, 1);
+            -ms-transition: .35s all cubic-bezier(.65, .05, .36, 1);
+        }
+
+        .navWrap nav {
+            padding: 0px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            transform: translateX(0);
+            -ms-transform: translateX(0);
+            -webkit-transform: translateX(0);
+            background: #fff;
+            z-index: 999;
+            transition: .35s all cubic-bezier(.65, .05, .36, 1);
+            -webkit-transition: .35s all cubic-bezier(.65, .05, .36, 1);
+            -ms-transition: .35s all cubic-bezier(.65, .05, .36, 1);
+            background: #fff;
+            width: 100%;
+            left: 0;
+            top: 60px;
+            margin: 0;
+            z-index: 999;
+        }
+
+        .openMenu {
+            display: none;
+        }
+
+        .mob-topSec {
+            display: block;
+            margin: 0px auto;
+            padding: 20px 24px 15px 24px;
+            border-bottom: none;
+            width: 100%;
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box .placeholder {
+            color: #c4c4c4;
+            top: 6px;
+            padding: 0px 25px;
+        }
+
+        .placeholder {
+            z-index: 1;
+            position: absolute;
+            font-size: 13px;
+            color: rgba(255, 255, 255, .3);
+            overflow: hidden;
+            top: 20px;
+            -webkit-transition: .3s all;
+            transition: .3s all;
+        }
+
+        .placeholder+input.inputbox {
+            font-size: 13px;
+            border: 1px solid #d9d6d6;
+            border-radius: 8px;
+            color: #c4c4c4;
+            width: 100%;
+            padding: 6px 26px;
+        }
+
+        .search-box .placeholder+input.inputbox {
+            background-color: transparent;
+            padding: 6px 10px 6px 26px;
+            width: 80%;
+        }
+
+        .openMenu-Hide {
+            display: block;
+        }
+
+        .mobile-tags {
+            background: #0072bc;
+            padding: 10px;
+        }
+
+        .mobile-tags ul li {
+            font-size: 14px;
+            display: inline-block;
+            margin: 0 14px 0 0;
+            background: #ffffff;
+            border: 0.5px solid rgba(0, 0, 0, 0.3);
+            box-sizing: border-box;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
+            border-radius: 20px;
+            color: #0072bc;
+            padding: 9px 20px;
+            margin-bottom: 10px;
+        }
+
+        .icon-hamburger.hide {
+            display: none;
+        }
+
+        .icon.icon-menu-close {
+            display: none;
+            background: url(/close.svg) no-repeat center center;
+            top: 16px;
+            margin-left: 10px;
+        }
+
+        .icon-menu-close.show,
+        .mobile-icon {
+            display: block;
+        }
+
+        .mobile-tags a.color-orange {
+            color: #f58220;
+        }
+
+        p.bannerHeadRow {
+            font-size: 16px;
+            line-height: 20px;
+            margin: 0px;
+            text-align: center;
+        }
+
+        .text-orange {
+            color: #f89c30;
+        }
+
+        .bannerTabs {
+            margin: 0 auto;
+            display: flex;
+            bottom: -100px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            padding-bottom: 1rem;
+        }
+
+        .bannerTabs li {
+            padding: 0px 10px 0 0px;
+            display: inline;
+            margin-left: 0;
+            line-height: 18px;
+        }
+
+        .bannerTabs li a [option][selected] {
+            color: #2AC9FF;
+        }
+
+        .bannerTabs li a {
+            color: white;
+            border-bottom: 2px solid #2AC9FF;
+        }
+
+        amp-selector [option][selected] {
+            outline: none;
+        }
+
+        .form-inline {
+            background: #fff;
+            padding-bottom: 20px;
+            padding: 10px 25px 10px;
+            border-radius: 8px;
+        }
+
+        .form-inline .haveusTitle {
+            margin: 0 auto;
+            display: table;
+        }
+
+        .form-inline .haveusTitle p {
+            font-size: 14px;
+            line-height: 23px;
+        }
+
+        .form-inline .haveusTitle span.text-orange {
+            background: transparent;
+            font-family: 'ALLIANZSANSBOLD';
+            transform: none;
+            display: inline;
+        }
+
+        .listItem li:first-child {
+            font-size: 10px;
+            line-height: 13px;
+            border: none;
+            display: inline;
+            padding: 0;
+        }
+
+        .listItem li:last-child {
+            padding-left: 0;
+        }
+
+        .listItem ul {
+            padding-left: 0px;
+        }
+
+        .listItem li img {
+            margin-right: 6px;
+            margin-top: 0px;
+            width: 15px;
+        }
+
+        .listItem li {
+            font-size: 10px;
+            line-height: 13px;
+            border: none;
+            display: inline;
+        }
+
+        .form-inline .havUsCallAllcontent {
+            display: block;
+            min-height: 100%;
+        }
+
+        .firstFormStep {
+            padding-bottom: 5px;
+            width: 100%;
+        }
+
+        .form-inline .floating-label {
+            display: inline-block;
+            min-height: auto;
+            width: 100%;
+        }
+
+        .inputBox {
+            position: relative;
+        }
+
+        .control-label {
+            position: absolute;
+            top: -8px;
+            left: 10px;
+            background-color: white;
+            padding: 0px 3px;
+            font-size: 12px;
+            line-height: 14px;
+            color: #333;
+        }
+
+        .form-inline .error {
+            font-size: 0.9rem;
+        }
+
+        .error {
+            background: #fff;
+            color: red;
+            position: absolute;
+            left: 0;
+            margin-top: 10px;
+            padding: 0 10px 0 20px;
+            opacity: 0;
+            top: 95%;
+            border-radius: 3px;
+            font-size: 1rem;
+            z-index: 2;
+            line-height: 20px;
+        }
+
+        .form-inline .inputBox input {
+            font-size: 14px;
+            font-family: AllianzSans;
+            color: #333;
+            width: 100%;
+            border: none;
+        }
+
+        .form-inline .placeholder {
+            color: #828282;
+            top: 12px;
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+        .floating-label .inputBox {
+            border: 1px solid #c4c4c4;
+            padding: 10px 13px;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+
+        .secondFormStep,
+        .thankyouStep {
+            display: none;
+        }
+
+
+        .floating-label.bajajDisclaim {
+            position: unset;
+        }
+
+        .container-checkbox {
+            display: block;
+            position: relative;
+            cursor: pointer;
+            font-size: 22px;
+            user-select: none;
+        }
+
+        .form-inline .checkboxWrap {
+            padding-top: 0;
+            position: unset;
+            display: block;
+            margin-bottom: 10px;
+            color: #aaa;
+        }
+
+        .form-inline .container-checkbox {
+            margin-bottom: 0px;
+        }
+
+        .form-inline .haveus_dec label {
+            font-size: 12px;
+        }
+
+        .form-inline .a-link {
+            color: #000;
+        }
+
+        .tabs-contentWrap .form-inline .container-checkbox input:checked~.checkmark-checkbox {
+            background-color: #0072bc;
+        }
+
+        .form-inline .firstFormStep .floating-label.connectbtn {
+            position: absolute;
+            width: 100%;
+            bottom: -45px;
+            left: 35%;
+            display: block;
+        }
+
+        .form-inline .floating-label.connectbtn .nextStepBtn {
+            font-size: 10px;
+            line-height: 7px;
+            min-width: auto;
+            background: none;
+            border: none;
+        }
+
+        .btn {
+            background: #f89c30;
+            border-radius: 50px;
+            color: #fff;
+            text-transform: uppercase;
+            clear: both;
+            position: relative;
+            text-align: center;
+            border: 1px solid #f89c30;
+        }
+
+        .firstFormStep .floating-label.connectbtn .btn {
+            min-width: auto;
+            border-radius: 50%;
+        }
+
+        .btn input {
+            color: #fff;
+        }
+
+        .form-inline .connectbtn .a-link.btn {
+            font-size: 14px;
+            margin: 15px 20px 7px 20px;
+            background: transparent;
+            overflow: unset;
+            border: none;
+            min-width: auto;
+            clear: unset;
+            padding: 0;
+            font-family: 'AllianzSans';
+        }
+    </style>
+</head>
+
+<body>
+    <section class="navbar">
+        <div class="header_wrapper">
+            <div class="flex1">
+                <div class="logo"> <a href="https://www.bajajallianzlife.com"> <img src="/logo.png"
+                            alt="Bajaj Allianz Life Insurance Company Ltd"> </a> </div>
+            </div>
+            <div class="flex2">
+                <div class="header-secondary">
+                    <div class="container-fluid">
+                        <div class="navWrap">
+                            <div class="linksWrap">
+                                <nav class="openMenu" [class]="menu ? 'openMenu-Hide' : 'openMenu'">
+                                    <div class="mob-topSec">
+                                        <div class="search-box">
+                                            <div class="placeholder">Search for Plans, Calculators, Services etc.&nbsp;
+                                            </div><input type="text" class="inputbox search_list_item" placeholder="">
+                                            <ul class="serach_result_list"></ul>
+                                        </div>
+                                    </div>
+                                    <div class="mobile-tags">
+                                        <ul>
+                                            <li><a href="https://www.bajajallianzlife.com/about-us.html"
+                                                    data-analytics="true"
+                                                    data-component-name="Balic Header Component">About Us</a> </li>
+                                            <li><a href="/become-an-agent.html" data-analytics="true"
+                                                    data-component-name="Balic Header Component"
+                                                    class="color-orange">Become An Agent</a></li>
+                                            <li><a href="https://careers.bajajallianzlife.com/" data-analytics="true"
+                                                    data-component-name="Balic Header Component"
+                                                    rel="nofollow">Careers</a></li>
+                                            <li><a href="https://www.bajajallianzlife.com/contact-us.html"
+                                                    data-analytics="true"
+                                                    data-component-name="Balic Header Component">Contact Us</a> </li>
+                                            <li><a href="/nri-insurance.html" data-analytics="true"
+                                                    data-component-name="Balic Header Component"
+                                                    class="color-orange">NRI</a></li>
+                                            <li><a href="https://life.bajajallianz.com/lifeinsurance/lifeProds/retrieveQuote.jsp"
+                                                    data-analytics="true" data-component-name="Balic Header Component"
+                                                    rel="nofollow">Retrieve Saved Quote</a></li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="pull-right">
+                                <ul class="icon-links">
+                                    <li class="nriIcon"> <a href="https://www.bajajallianzlife.com/nri-insurance.html"
+                                            data-component-name="Balic Header Component" data-analytics="true"
+                                            class="nri-icon" title="NRI"><i class="icon icon-sm icon-nri"></i></a> </li>
+                                    <button class="loginIcon" on="tap:AMP.setState({showCust : !showCust})"> <a
+                                            class="login-icon" title="Login to Life Assist - Customer Portal">LOGIN</a>
+                                        <div class="topIcon-info customer-login"
+                                            [class]="showCust ? 'topIcon-info-show customer-login' : 'topIcon-info customer-login'">
+                                            <div class="closebtn svgBox" data-svg="/content/dam/balic/index/close.svg">
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <p class="imgiconic-customer">Customer</p>
+                                                    <div class="btnWrap"> <a
+                                                            href="https://la.bajajallianzlife.com/login-module/login?utm_source=websiteDashboard"
+                                                            class="btn aa" rel="nofollow">Login</a> <a
+                                                            href="https://la.bajajallianzlife.com/login-module/new-user-login?utm_source=websiteDashboard"
+                                                            class="btn regbtn aa">Register</a> </div>
+                                                </li>
+                                                <li>
+                                                    <p class="imgiconic-partner">Partners</p>
+                                                    <div class="btnWrap"> <a
+                                                            href="https://sales.baliconline.in/SalesPortal2/login.jsp#"
+                                                            class="btn aa" data-analytics="true"
+                                                            data-component-name="Balic Header Component"
+                                                            rel="nofollow">Login</a> <a
+                                                            href="https://www.bajajallianzlife.com/become-an-agent.html"
+                                                            data-analytics="true"
+                                                            data-component-name="Balic Header Component"
+                                                            class="btn regbtn aa">Register</a> </div>
+                                                </li>
+                                                <div class="mobile-icon"> <i class="icon icon-sm icon-hamburger"></i> <i
+                                                        class="icon icon-sm icon-menu-close"></i> </div>
+                                            </ul>
+                                        </div>
+                                    </button>
+                                    <div class="mobile-icon" on="tap:AMP.setState({menu : !menu})"> <i
+                                            class="icon icon-sm icon-hamburger"
+                                            [class]="menu ? 'icon icon-sm icon-hamburger hide' : 'icon icon-sm icon-hamburger'"></i>
+                                        <i class="icon icon-sm icon-menu-close"
+                                            [class]="menu ? 'icon icon-sm icon-menu-close show' : 'icon icon-sm icon-menu-close hide'"></i>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="firstSec">
+        <section class="life-insurance-plans bg-blue-sec">
+            <div class="container">
+                <div class="life-insurance-slider-nav"> <amp-selector class="tapHeader" layout="container"
+                        on="select:firstSec.toggle(index=event.targetOption,value=true)">
+                        <ul class="bannerTabs">
+                            <li option="0" selected> <a class="tablinks">Term Plans</a> </li>
+                            <li option="1"> <a class="tablinks">Diabetic Term Plan</a> </li>
+                            <li option="2"> <a class="tablinks">Investment Plans</a> </li>
+                            <li option="3"> <a class="tablinks"> Guaranteed Return Plans</a> </li>
+                        </ul>
+                    </amp-selector>
+                    <amp-selector class="innerData" id="firstSec" layout="container">
+                        <div option selected>
+                            <form method="get" class="form-inline" id="tab1-form">
+                                <div class="haveusTitle">
+                                    <div>
+                                        <p><span class="text-orange">Pay
+                                                Lower Premiums On Purchasing</span><span> Term Plan
+                                                Online<sup>3</sup></span></p>
+                                    </div>
+                                </div>
+                                <div class="listItem">
+                                    <ul>
+                                        <ul>
+                                            <li><img src="/tick.png"><span> Tax
+                                                    Benefits<sup>1</sup></span></li>
+                                            <li><img src="/tick.png"><span> Life
+                                                    Cover</span></li>
+                                        </ul>
+
+                                    </ul>
+                                </div>
+                                <div class="havUsCallAllcontent">
+                                    <div class="firstFormStep">
+                                        <div class="floating-label userName">
+                                            <div class="fieldBox inputBox requiredField">
+                                                <label class="control-label">Name</label>
+                                                <div class="placeholder">Name&nbsp;</div>
+                                                <input name="Name" type="text" data-label="true" placeholder=""
+                                                    data-element="true" data-validation="required,alphaOnly"
+                                                    class="inputName" data-analytics="true"
+                                                    data-component-name="General Banner Tab Form" tabindex="0">
+                                                <div class="error">
+                                                    Please enter a Name</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="floating-label mobileNo">
+                                            <div class="fieldBox inputBox requiredField">
+                                                <label class="control-label">Mobile
+                                                    Number</label>
+                                                <div class="placeholder">Mobile
+                                                    Number&nbsp;
+                                                </div><input name="Mobile Number" type="text" data-label="true"
+                                                    maxlength="10" data-element="true" placeholder=""
+                                                    class="inpt-mobile numberOnly"
+                                                    data-validation="required,mobileOnly,maxlength"
+                                                    data-analytics="true" data-component-name="General Banner Tab Form"
+                                                    tabindex="0">
+                                                <div class="error">
+                                                    Please enter a Mobile No.</div>
+                                            </div>
+                                        </div>
+                                        <div class="floating-label connectbtn">
+                                            <div class="btn">
+                                                <input type="button" value="Next" class="submit-btn nextStepBtn"
+                                                    data-analytics="true" data-component-name="General Banner Tab Form"
+                                                    tabindex="0" avt-org-inp="10ac3d04253ef7e1ddc73e6091c0cd55">
+                                                <img src="/formArrow.png">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="floating-label bajajDisclaim">
+                                        <div class="fieldBox checkboxWrap readmorecontent requiredField">
+                                            <label class="container-checkbox">
+                                                <div class="haveus_dec">
+                                                    <label for="haveus-accept">
+                                                        I agree and consent to the
+
+                                                        <a class="a-link color-white readmore" tabindex="0"
+                                                            data-analytics="true"
+                                                            data-component-name="General Banner Tab Form"
+                                                            data-all-cta="true" data-ctatitle="Term Plans">Terms &amp;
+                                                            Conditions and the Privacy Policy</a>
+                                                    </label>
+                                                </div>
+
+                                                <!-- <a href="javascript: void(0);" class="a-link color-white read-less">
+                                                            Read Less</a> -->
+                                                <input type="checkbox" id="expert1" data-validation="required"
+                                                    checked="checked" data-analytics="true"
+                                                    data-component-name="General Banner Tab Form" tabindex="0">
+                                                <span class="checkmark-checkbox"></span>
+                                            </label>
+                                            <div class="error">
+                                                Please
+                                                check the box to proceed</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div option>
+                            <form action="javascript:;" method="get" class="form-inline" id="tab2-form">
+                                <div class="haveusTitle">
+                                    <div>
+                                        <p><span class="text-orange">Strong Long Term </span><span>Fund
+                                                Performance</span> <span class="text-orange">Track
+                                                Record<sup>**</sup></span></p>
+
+                                    </div>
+                                </div>
+                                <div class="listItem">
+                                    <ul>
+                                        <ul>
+                                            <li><img src="/tick.png"><span>Tax
+                                                    free returns<sup>*</sup></span></li>
+                                            <li><img src="/tick.png"><span>Life
+                                                    Cover</span></li>
+                                        </ul>
+
+                                    </ul>
+                                </div>
+                                <div class="havUsCallAllcontent">
+                                    <div class="firstFormStep">
+                                        <div class="floating-label userName">
+                                            <div class="fieldBox inputBox requiredField">
+                                                <label class="control-label">Name</label>
+                                                <div class="placeholder">Name&nbsp;</div>
+                                                <input name="Name" type="text" data-label="true" data-element="true"
+                                                    placeholder="" data-validation="required,alphaOnly"
+                                                    class="inputName" data-analytics="true"
+                                                    data-component-name="General Banner Tab Form" tabindex="0">
+                                                <div class="error">
+                                                    Please enter a Name</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="floating-label mobileNo">
+                                            <div class="fieldBox inputBox requiredField">
+                                                <label class="control-label">Mobile
+                                                    Number</label>
+                                                <div class="placeholder">Mobile
+                                                    Number&nbsp;</div><input name="Mobile Number" type="text"
+                                                    data-label="true" maxlength="10" data-element="true" placeholder=""
+                                                    class="inpt-mobile numberOnly"
+                                                    data-validation="required,mobileOnly,maxlength"
+                                                    data-analytics="true" data-component-name="General Banner Tab Form"
+                                                    tabindex="0">
+                                                <div class="error">
+                                                    Please enter a Mobile No.</div>
+                                            </div>
+                                        </div>
+                                        <div class="floating-label connectbtn">
+                                            <div class="btn">
+                                                <input type="button" value="Next" class="submit-btn nextStepBtn"
+                                                    data-analytics="true" data-component-name="General Banner Tab Form"
+                                                    tabindex="0" avt-org-inp="10ac3d04253ef7e1ddc73e6091c0cd55">
+                                                <img src="/formArrow.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="floating-label bajajDisclaim">
+                                        <div class="fieldBox checkboxWrap readmorecontent requiredField">
+                                            <label class="container-checkbox">
+                                                <div class="haveus_dec">
+                                                    <label for="haveus-accept">
+                                                        I agree and consent to the
+
+                                                        <a class="a-link color-white readmore" tabindex="0"
+                                                            data-analytics="true"
+                                                            data-component-name="General Banner Tab Form"
+                                                            data-all-cta="true" data-ctatitle="Investment Plans"> Terms
+                                                            &amp; Conditions and the Privacy Policy</a>
+                                                    </label>
+                                                </div>
+
+                                                <!-- <a href="javascript: void(0);" class="a-link color-white read-less">
+                                                            Read Less</a> -->
+                                                <input type="checkbox" id="expert1" data-validation="required"
+                                                    checked="checked" data-analytics="true"
+                                                    data-component-name="General Banner Tab Form" tabindex="0">
+                                                <span class="checkmark-checkbox"></span>
+                                            </label>
+                                            <div class="error">
+                                                Please check the box to proceed</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div option>
+                            <form method="get" class="form-inline" id="tab1-form">
+                                <div class="haveusTitle">
+                                    <div>
+                                        <p><span class="text-orange"> Diabetic?</span><span>Get Covered Now!</span></p>
+
+                                    </div>
+                                </div>
+                                <div class="listItem">
+                                    <ul>
+                                        <ul>
+                                            <li><img src="/tick.png"><span> Tax
+                                                    Benefits<sup>1</sup></span></li>
+                                            <li><img src="/tick.png"><span> Life
+                                                    Cover</span></li>
+                                        </ul>
+
+                                    </ul>
+                                </div>
+                                <div class="havUsCallAllcontent">
+                                    <div class="firstFormStep">
+                                        <div class="floating-label userName">
+                                            <div class="fieldBox inputBox requiredField">
+                                                <label class="control-label">Name</label>
+                                                <div class="placeholder">Name&nbsp;</div>
+                                                <input name="Name" type="text" data-label="true" placeholder=""
+                                                    data-element="true" data-validation="required,alphaOnly"
+                                                    class="inputName" data-analytics="true"
+                                                    data-component-name="General Banner Tab Form" tabindex="0">
+                                                <div class="error">
+                                                    Please enter a Name</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="floating-label mobileNo">
+                                            <div class="fieldBox inputBox requiredField">
+                                                <label class="control-label">Mobile
+                                                    Number</label>
+                                                <div class="placeholder">Mobile
+                                                    Number&nbsp;
+                                                </div><input name="Mobile Number" type="text" data-label="true"
+                                                    maxlength="10" data-element="true" placeholder=""
+                                                    class="inpt-mobile numberOnly"
+                                                    data-validation="required,mobileOnly,maxlength"
+                                                    data-analytics="true" data-component-name="General Banner Tab Form"
+                                                    tabindex="0">
+                                                <div class="error">
+                                                    Please enter a Mobile No.</div>
+                                            </div>
+                                        </div>
+                                        <div class="floating-label connectbtn">
+                                            <div class="btn">
+                                                <input type="button" value="Next" class="submit-btn nextStepBtn"
+                                                    data-analytics="true" data-component-name="General Banner Tab Form"
+                                                    tabindex="0" avt-org-inp="10ac3d04253ef7e1ddc73e6091c0cd55">
+                                                <img src="/formArrow.png">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="floating-label bajajDisclaim">
+                                        <div class="fieldBox checkboxWrap readmorecontent requiredField">
+                                            <label class="container-checkbox">
+                                                <div class="haveus_dec">
+                                                    <label for="haveus-accept">
+                                                        I agree and consent to the
+
+                                                        <a class="a-link color-white readmore" tabindex="0"
+                                                            data-analytics="true"
+                                                            data-component-name="General Banner Tab Form"
+                                                            data-all-cta="true" data-ctatitle="Term Plans">Terms &amp;
+                                                            Conditions and the Privacy Policy</a>
+                                                    </label>
+                                                </div>
+
+                                                <!-- <a href="javascript: void(0);" class="a-link color-white read-less">
+                                                            Read Less</a> -->
+                                                <input type="checkbox" id="expert1" data-validation="required"
+                                                    checked="checked" data-analytics="true"
+                                                    data-component-name="General Banner Tab Form" tabindex="0">
+                                                <span class="checkmark-checkbox"></span>
+                                            </label>
+                                            <div class="error">
+                                                Please
+                                                check the box to proceed</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div option>
+                            <form action="javascript:;" method="get" class="form-inline" id="tab3-form">
+                                <div class="haveusTitle">
+                                    <div>
+                                        <p><span class="text-orange">Starting at </span><span>Rs. 450/per
+                                                month<sup>~</sup></span></p>
+
+                                    </div>
+                                </div>
+                                <div class="listItem">
+                                    <ul>
+                                        <ul>
+                                            <li><img src="/tick.png"><span>No
+                                                    Medicals</span></li>
+                                            <li><img src="/tick.png"><span>Life
+                                                    Cover</span></li>
+                                        </ul>
+
+                                    </ul>
+                                </div>
+                                <div class="havUsCallAllcontent">
+                                    <div class="firstFormStep">
+                                        <div class="floating-label userName">
+                                            <div class="fieldBox inputBox requiredField">
+                                                <label class="control-label">Name</label>
+                                                <div class="placeholder">Name&nbsp;</div>
+                                                <input name="Name" type="text" data-label="true" data-element="true"
+                                                    placeholder="" data-validation="required,alphaOnly"
+                                                    class="inputName" data-analytics="true"
+                                                    data-component-name="General Banner Tab Form" tabindex="0">
+                                                <div class="error">
+                                                    Please enter a Name</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="floating-label mobileNo">
+                                            <div class="fieldBox inputBox requiredField">
+                                                <label class="control-label">Mobile
+                                                    Number</label>
+                                                <div class="placeholder">Mobile
+                                                    Number&nbsp;</div><input name="Mobile Number" type="text"
+                                                    data-label="true" maxlength="10" data-element="true" placeholder=""
+                                                    class="inpt-mobile numberOnly"
+                                                    data-validation="required,mobileOnly,maxlength"
+                                                    data-analytics="true" data-component-name="General Banner Tab Form"
+                                                    tabindex="0">
+                                                <div class="error">
+                                                    Please enter a Mobile No.</div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="floating-label connectbtn">
+                                            <div class="btn">
+                                                <input type="button" value="Next" class="submit-btn nextStepBtn"
+                                                    data-analytics="true" data-component-name="General Banner Tab Form"
+                                                    tabindex="0" avt-org-inp="10ac3d04253ef7e1ddc73e6091c0cd55">
+                                                <img src="/formArrow.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="floating-label bajajDisclaim">
+                                        <div class="fieldBox checkboxWrap readmorecontent requiredField">
+                                            <label class="container-checkbox">
+                                                <div class="haveus_dec">
+                                                    <label for="haveus-accept">
+                                                        I agree and consent to the
+
+                                                        <a class="a-link color-white readmore" tabindex="0"
+                                                            data-analytics="true"
+                                                            data-component-name="General Banner Tab Form"
+                                                            data-all-cta="true"
+                                                            data-ctatitle=" Guaranteed Return Plans"> Terms &amp;
+                                                            Conditions and the Privacy Policy</a>
+                                                    </label>
+                                                </div>
+
+                                                <!-- <a href="javascript: void(0);" class="a-link color-white read-less">
+                                                            Read Less</a> -->
+                                                <input type="checkbox" id="expert1" data-validation="required"
+                                                    checked="checked" data-analytics="true"
+                                                    data-component-name="General Banner Tab Form" tabindex="0">
+                                                <span class="checkmark-checkbox"></span>
+                                            </label>
+                                            <div class="error">
+                                                Please check the box to proceed</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </amp-selector>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="secondSec">
+        <div class="container">
+            <h3 class="headingcompo1">Easy to use Tools & Calculators to plan for your <span class="orange-text">Life
+                    Goals!</span> </h3>
+            <div class="slick-list"> <amp-carousel width="100" height="100" layout="responsive" type="slides">
+                    <div class="tools-slide"> <img class="lazy" height="45px" width="75px" src="/cal.svg"
+                            data-src="/cal.svg" alt="Life Goal Calculator ">
+                        <div class="caption">
+                            <h4>Life Goal Calculator</h4>
+                        </div>
+                        <p id="hidenContent">Invest today to accumulate the wealth for your future Life Goals.</p>
+                        <button on="tap:hidenContent.toggleVisibility" class="ba-plus-link"> <img
+                                src="https://www.bajajallianzlife.com/content/dam/balic/homepage/icons/plus.png"
+                                data-src="https://www.bajajallianzlife.com/content/dam/balic/homepage/icons/plus.png"></button>
+                    </div>
+                    <div class="tools-slide"> <img class="lazy" height="45px" width="75px" src="/childcal.svg"
+                            data-src="/childcal.svg" alt="Child Education Planning Tool">
+                        <div class="caption">
+                            <h4>Child Education Planning Tool</h4>
+                        </div>
+                        <p id="hidenContent2">Invest today to accumulate the wealth for your future Life Goals.</p>
+                        <button on="tap:hidenContent2.toggleVisibility" class="ba-plus-link"> <img
+                                src="https://www.bajajallianzlife.com/content/dam/balic/homepage/icons/plus.png"
+                                data-src="https://www.bajajallianzlife.com/content/dam/balic/homepage/icons/plus.png"></button>
+                    </div>
+                    <div class="tools-slide"> <img class="lazy" height="45px" width="75px" src="/goalcal.svg"
+                            data-src="/goalcal.svg" alt="Term Insurance Calculator">
+                        <div class="caption">
+                            <h4>Term Insurance Calculator</h4>
+                        </div>
+                    </div>
+                    <div class="tools-slide"> <img class="lazy" height="45px" width="75px" src="/spend.svg"
+                            data-src="/spend.svg" alt="Savings Life Goals">
+                        <div class="caption">
+                            <h4>Savings to Life Goals Convertor</h4>
+                        </div>
+                    </div>
+                </amp-carousel> </div>
+        </div>
+    </section>
+    <section class="thirdSec">
+        <div class="container-accordian"> <amp-accordion animate expand-single-section>
+                <section expanded>
+                    <h6 class="accordianTitle iconic-our-plans"> Our Plans </h6>
+                    <div> <amp-carousel width="100" height="100" layout="responsive" type="slides">
+                            <div class="tools-slide tools-slide-sec"> <img class="lazy" height="45px" width="75px"
+                                    src="/cal.svg" data-src="/cal.svg" alt="Life Goal Calculator ">
+                                <div class="caption">
+                                    <h4>Life Goal Calculator</h4>
+                                </div>
+                                <p id="hidenContent">Invest today to accumulate the wealth for your future Life Goals.
+                                </p> <button on="tap:hidenContent.toggleVisibility" class="ba-plus-link"> <img
+                                        src="https://www.bajajallianzlife.com/content/dam/balic/homepage/icons/plus.png"
+                                        data-src="https://www.bajajallianzlife.com/content/dam/balic/homepage/icons/plus.png"></button>
+                            </div>
+                            <div class="tools-slide tools-slide-sec"> <img class="lazy" height="45px" width="75px"
+                                    src="/cal.svg" data-src="/cal.svg" alt="Life Goal Calculator ">
+                                <div class="caption">
+                                    <h4>Life Goal Calculator</h4>
+                                </div>
+                                <p id="hidenContent">Invest today to accumulate the wealth for your future Life Goals.
+                                </p> <button on="tap:hidenContent.toggleVisibility" class="ba-plus-link"> <img
+                                        src="https://www.bajajallianzlife.com/content/dam/balic/homepage/icons/plus.png"
+                                        data-src="https://www.bajajallianzlife.com/content/dam/balic/homepage/icons/plus.png"></button>
+                            </div>
+                        </amp-carousel> </div>
+                </section>
+                <section>
+                    <h6 class="accordianTitle iconic-our-plans"> Benefits of Life Insurance </h6>
+                    <div> <amp-accordion animate expand-single-section>
+                            <section expanded class="tools-slide-sec-inner-car">
+                                <h2 class="accordianTitletx">Benefits of Life Insurance</h2>
+                                <p class="caracc">The 1st step to achieving your Life Goals is to literally have to
+                                    describe the goal and your life in a great deal of detail. Once your life goals are
+                                    defined, the next step is creating a plan to get there. Achieving life goals is a
+                                    long and complex process. Based on your knowledge of what it will take to achieve
+                                    your goal, the next step is to break it down into smaller components.</p>
+                            </section>
+                            <section class="tools-slide-sec-inner-car">
+                                <h2 class="accordianTitletx">Tax Benefits</h2>
+                                <p class="caracc">Life insurance policy offers you tax saving benefits under section 80C
+                                    of the Income Tax Act, 1961. Under this Act, the premiums paid towards a life
+                                    insurance policy are allowed as tax deductions from your taxable income up to the
+                                    tune of INR 1.5 lacs every year. The payout of a life insurance policy, if any, may
+                                    also be exempt from taxation. </p>
+                            </section>
+                            <section class="tools-slide-sec-inner-car">
+                                <h2 class="accordianTitletx">They help with loans</h2>
+                                <p class="caracc">With a life insurance policy you stand to receive two loan-related
+                                    benefits. The first is that if you meet with an untimely demise, your life insurance
+                                    plan will safeguard your loved ones from any mortgages you may have, such as home
+                                    loans, etc. In case of a financial crunch, instead of surrendering your policy
+                                    mid-way through your goal realization, you can easily avail loans by putting your
+                                    life insurance policy up as a collateral. You can take a loan against the surrender
+                                    value of your life insurance policy. This is applicable for certain types of Life
+                                    Insurance products.</p>
+                            </section>
+                        </amp-accordion> </div>
+                </section>
+            </amp-accordion> </div>
+    </section>
+    <section class="fourthSec">
+        <section class="testimonials">
+            <div class="container clearfix"> <amp-carousel width="100" height="155" layout="responsive" type="slides">
+                    <div class="testimonial-block">
+                        <h3>Investment <br><span class="color-highlight-blue">Update</span> </h3>
+                        <div class="testimonial-img"> <img
+                                data-src="https://www.bajajallianzlife.com/content/dam/balic/index/investment-updates.png"
+                                src="https://www.bajajallianzlife.com/content/dam/balic/index/investment-updates.png">
+                        </div>
+                        <div class="text">
+                            <div class="middle-part">
+                                <p>Monthly Fund Performance - March 2023</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-btn"><a href="/content/dam/balic/pdf/fund-pro.pdf"
+                                class="btn clientblog">Know more</a></div>
+                    </div>
+                    <div class="testimonial-block">
+                        <h3>Trending <br><span class="color-highlight-blue">@ Bajaj Allianz Life</span> </h3>
+                        <div class="position-relative">
+                            <div class="testimonial-img"> <img
+                                    data-src="https://www.bajajallianzlife.com/content/dam/balic/video-thumb/solvency-ratio-2022.png"
+                                    src="https://www.bajajallianzlife.com/content/dam/balic/video-thumb/solvency-ratio-2022.png"
+                                    class="lazy" alt="Trending @ Bajaj Allianz Life"
+                                    title="Bajaj Allianz Life | Solvency Ratio 2022"> </div> <button class="play-btn"
+                                on="tap:secCar"> <a class="video-icons video-links"
+                                    data-url="https://www.youtube.com/embed/29P32mwLCyE?rel=0" tabindex="0"></a>
+                            </button> <amp-lightbox class="secCar" id="secCar" layout="nodisplay">
+                                <div class="" on="tap:my-lightbox.close" role="button" tabindex="0">
+                                    <div class="youtubePlay"> <amp-youtube width="90" height="100"
+                                            style="border: 4px solid white;" layout="responsive"
+                                            data-videoid="9g2i3aTK4SE"> </amp-youtube> </div> <a on="tap:secCar.hide"
+                                        class="close-icon">X</a>
+                                </div>
+                            </amp-lightbox>
+                        </div>
+                        <div class="text">
+                            <div class="middle-part">
+                                <p>Bajaj Allianz Life | Solvency Ratio 2022</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-btn"> <a data-url="https://www.youtube.com/embed/29P32mwLCyE?rel=0"
+                                class="btn watch video-links" rel="nofollow" tabindex="0"><button on="tap:secCar">Watch
+                                    Video </button></a> </div>
+                    </div>
+                    <div class="testimonial-block">
+                        <h3>Happy <span class="color-highlight-blue">Smart Assist Clients</span></h3>
+                        <div class="testimonial-img"><img
+                                data-src="https://www.bajajallianzlife.com/content/dam/balic/index/rahul-kendre-homepage.png"
+                                src="https://www.bajajallianzlife.com/content/dam/balic/index/rahul-kendre-homepage.png"
+                                class="lazy" alt="Happy life goal clients" title="Please Enter Title"> </div>
+                        <div class="text">
+                            <div class="middle-part">
+                                <p class="quotes-icon">It is nice initiative taken by Bajaj Allianz Life company, great
+                                    experience to connect virtually wit<span class="moreelipses">...</span><span
+                                        class="morecontent"><span>th sales person</span></span></p>
+                                <p class="person-name"></p> <a class="text-link popupTestimonialLinkClient"><button
+                                        on="tap:my-lightbox">Read More</button></a> <amp-lightbox id="my-lightbox"
+                                    class="secCar" layout="nodisplay">
+                                    <div on="tap:my-lightbox.close" role="button" tabindex="0">
+                                        <div class="testimonial-popup"> <a class="close-icon">X</a>
+                                            <div class="main-wrappopup">
+                                                <h3>Happy <span class="color-highlight-blue">Smart Assist Clients</span>
+                                                </h3>
+                                                <div class="content-part">
+                                                    <div class="left-part"><span><img
+                                                                data-src="https://www.bajajallianzlife.com/content/dam/balic/index/rahul-kendre-homepage.png"
+                                                                src="https://www.bajajallianzlife.com/content/dam/balic/index/rahul-kendre-homepage.png"
+                                                                class="lazy" alt="Happy life goal clients"
+                                                                title="Please Enter Title" data-loaded="true"></span>
+                                                        <h4></h4>
+                                                    </div>
+                                                    <div class="right-part">
+                                                        <p>It is nice initiative taken by Bajaj Allianz Life company,
+                                                            great experience to connect virtually with sales person.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </amp-lightbox>
+                            </div>
+                        </div>
+                        <div class="testimonial-btn"><a
+                                href="https://www.bajajallianzlife.com/smart-assist-testimonial.html" class="btn">View
+                                all</a></div>
+                    </div>
+                </amp-carousel> </div>
+        </section>
+    </section>
+    <section class="fifthSec">
+        <section class="life-insurance-plans bg-blue">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="heading text-white">Life Insurance Plans</h1>
+                </div>
+                <div class="life-insurance-slider-nav"> <amp-selector class="tapHeader" layout="container"
+                        on="select:innerForm.toggle(index=event.targetOption,value=true)">
+                        <div class="plans-nav" option="0" selected>
+                            <div class="icon icon-md icon-term-insurance"> <img class="default-img lazy"
+                                    data-src="/content/dam/balic/homepage/icons/term-insurance.svg"
+                                    src="https://www.bajajallianzlife.com/content/dam/balic/term/loader.svg"
+                                    title="Term Insurance" alt="Term Insurance"> </div>
+                            <p>Term Insurance</p>
+                        </div>
+                        <div class="plans-nav" option="1">
+                            <div class="icon icon-md icon-ulip-plan"> <img class="default-img lazy" data-src="/uli.svg"
+                                    src="/uli.svg" title="Term Insurance" alt="Term Insurance"> </div>
+                            <p>ULIP Plans</p>
+                        </div>
+                        <div class="plans-nav" option="2">
+                            <div class="icon icon-md icon-retirement-plan"> <img class="default-img lazy"
+                                    data-src="/ret.svg" src="/ret.svg" title="Term Insurance" alt="Term Insurance">
+                            </div>
+                            <p>Retirement Plans</p>
+                        </div>
+                    </amp-selector> <amp-selector class="innerData" id="innerForm" layout="container">
+                        <div class="plans-detials" option selected>
+                            <div class="plans-img"> <amp-img alt="A view of the sea"
+                                    src="https://www.bajajallianzlife.com/content/dam/balic/homepage/bajaj-allianz-spg-psy-mobi.png"
+                                    width="900" height="675" layout="responsive"> </amp-img> </div>
+                            <div class="plans-detials-blk">
+                                <h3>Bajaj Allianz Life Smart Protection Goal</h3> <span class="ribbon-orange">New</span>
+                                <p>A Non Linked, Non Participating, Individual Life Insurance Term Plan</p>
+                                <ul class="plans-check-list">
+                                    <li>1% discount on online purchase<sup>3</sup></li>
+                                    <li class="orange-text"> <span>₹</span> 1 Crore Cover @ <span>₹</span>17 per
+                                        day<sup>2</sup> </li>
+                                </ul>
+                                <div class="but-group"> <a data-tab-name="Term Insurance"
+                                        data-title="Life Insurance Plans" data-analytics="true"
+                                        data-component-name="lifeinsurancegoals-homepage" data-all-cta="true"
+                                        class="btn"
+                                        href="https://www.bajajallianzlife.com/term-insurance-plans/smart-protect-goal-term-plan.html#SPGCalc"
+                                        tabindex="0">CALCULATE NOW</a> <a data-tab-name="Term Insurance"
+                                        data-title="Life Insurance Plans" data-analytics="true"
+                                        data-component-name="lifeinsurancegoals-homepage" data-all-cta="true"
+                                        href="https://www.bajajallianzlife.com/term-insurance-plans/smart-protect-goal-term-plan.html"
+                                        class="ba_knowmore_link btn" tabindex="0">Know More</a> </div>
+                            </div>
+                        </div>
+                        <div class="plans-detials" option>
+                            <div class="plans-img"> <amp-img alt="A view of the sea"
+                                    src="https://www.bajajallianzlife.com/content/dam/balic/homepage/bajaj-allianz-life-goal-assure-mobi.png"
+                                    width="900" height="675" layout="responsive"> </amp-img> </div>
+                            <div class="plans-detials-blk">
+                                <h3>Bajaj Allianz Life Goal Assure</h3> <span class="ribbon-orange">Most Popular</span>
+                                <p>A Unit-linked Non-Participating Life Insurance Plan</p>
+                                <ul class="plans-check-list">
+                                    <li>Tax Saver<sup>*</sup></li=>
+                                    <li>Return of life cover charges<sup>#</sup></li>
+                                </ul>
+                                <div class="but-group"> <a data-tab-name="ULIP Plans" data-title="Life Insurance Plans"
+                                        data-analytics="true" data-component-name="lifeinsurancegoals-homepage"
+                                        data-all-cta="true" rel="nofollow" class="btn"
+                                        href="https://life.bajajallianz.com/life-insurance/#/personal_information?pid=307"
+                                        tabindex="0">Invest Now</a> <a data-tab-name="ULIP Plans"
+                                        data-title="Life Insurance Plans" data-analytics="true"
+                                        data-component-name="lifeinsurancegoals-homepage" data-all-cta="true"
+                                        href="https://www.bajajallianzlife.com/ulip-plans/financial-life-goals-assure.html"
+                                        class="ba_knowmore_link btn" tabindex="0">Know More</a> </div>
+                            </div>
+                        </div>
+                        <div class="plans-detials" option>
+                            <div class="plans-img"> <amp-img alt="A view of the sea"
+                                    src="https://www.bajajallianzlife.com/content/dam/balic/homepage/gpg-home-mob.png"
+                                    width="900" height="675" layout="responsive"> </amp-img> </div>
+                            <div class="plans-detials-blk">
+                                <h3>Bajaj Allianz Life Guaranteed Pension Goal</h3>
+                                <p>A Non-Linked, Non- Participating, Deferred & Immediate Annuity plan</p>
+                                <ul class="plans-check-list">
+                                    <li>No Medicals</li>
+                                    <li>Quick Issuance</li>
+                                </ul>
+                                <div class="but-group"> <a data-tab-name="Retirement Plans"
+                                        data-title="Life Insurance Plans" data-analytics="true"
+                                        data-component-name="lifeinsurancegoals-homepage" data-all-cta="true"
+                                        rel="nofollow" class="btn"
+                                        href="https://life.bajajallianz.com/life-insurance/view/pensionGoal.html"
+                                        tabindex="0">BUY NOW</a> <a data-tab-name="Retirement Plans"
+                                        data-title="Life Insurance Plans" data-analytics="true"
+                                        data-component-name="lifeinsurancegoals-homepage" data-all-cta="true"
+                                        href="https://www.bajajallianzlife.com/retirement-pension-plans/guaranteed-pension-goal.html"
+                                        class="ba_knowmore_link btn" tabindex="0">Know More</a> </div>
+                            </div>
+                        </div>
+                    </amp-selector> <a href="https://www.bajajallianzlife.com/life-insurance-plans.html"
+                        class="text-center ba-view-all-white">View All Life Insurance Plans</a> </div>
+            </div>
+        </section>
+    </section>
+</body>
+
+</html>

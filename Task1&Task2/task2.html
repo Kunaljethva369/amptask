@@ -1,0 +1,576 @@
+<!doctype html><!-- This tells everyone that this is an AMP file. `<html amp>` works too -->
+<html ⚡>
+<!--Ref: https://amp.dev/documentation/guides-and-tutorials/learn/spec/amphtml/ --><!-- The charset definition must be the first child of the `<head>` tag -->
+
+<head>
+    <meta charset="utf-8"> <!-- The AMP runtime must be loaded as the second child of the `<head>` tag.-->
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
+    <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
+    <!--AMP HTML files require a canonical link pointing to the regular HTML. If no HTML version exists, it should point to itself -->
+    <link rel="canonical" href=".html">
+    <title></title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <!--CSS must be embedded inline-->
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+    </style><noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
+    </noscript>
+    <style amp-custom>
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            padding: 0 10px;
+        }
+
+        .testimonials {
+            position: relative;
+            padding: 16px 0;
+            min-height: 605px;
+            content-visibility: auto;
+            contain-intrinsic-size: 0 605px;
+        }
+
+        .testimonials:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            background: #e3e3e3;
+            width: 100%;
+            height: 322px;
+        }
+
+        .testimonial-block {
+            background: #fff;
+            padding: 25px 0px 35px;
+            -webkit-box-shadow: 0px 0px 5px 0px rgba(161, 161, 161, 1);
+            -moz-box-shadow: 0px 0px 5px 0px rgba(161, 161, 161, 1);
+            box-shadow: 0px 0px 5px 0px rgba(161, 161, 161, 1);
+            text-align: center;
+            min-height: 490px;
+            height: 532px;
+            width: 90%;
+            margin: 0px auto;
+            margin-top: 1.4rem;
+        }
+
+        .testimonial-block h3 {
+            font-size: 28px;
+            font-family: AllianzSansBold;
+            text-align: center;
+            text-transform: capitalize;
+            color: #9f9f9f;
+        }
+
+        .color-highlight-blue {
+            color: #0273bc;
+            display: block;
+        }
+
+        .testimonial-block .testimonial-img {
+            width: 180px;
+            margin: 30px auto 55px;
+            border-radius: 100px;
+            height: 180px;
+            position: relative;
+        }
+
+        .testimonial-img img {
+            width: 100%;
+        }
+
+        .testimonial-block .middle-part {
+            min-height: 105px;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .testimonials-block p {
+            text-align: center;
+            margin: 0 0 26px 0;
+            font-size: 16px;
+        }
+
+        .testimonial-btn {
+            margin: 0 auto;
+            display: table;
+        }
+
+        .btn {
+            background: #f89c30;
+            padding: 8px 15px;
+            min-width: auto;
+            border-radius: 50px;
+            color: #fff;
+            font-size: 1rem;
+            text-transform: uppercase;
+            float: left;
+            clear: both;
+            font-family: AllianzSansBold;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            text-align: center;
+            border: 1px solid #f89c30;
+        }
+
+        .play-btn {
+            position: relative;
+        }
+
+        .video-icons.video-links {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            display: block;
+            bottom: 55px;
+            margin-left: 60px;
+            background-image: url(/play.png);
+            width: 48px;
+            height: 48px;
+            background-repeat: no-repeat;
+            background-position: 4px -433px;
+        }
+
+        .youtubePlay {
+            display: block;
+            width: 90%;
+            margin: 0px auto;
+            margin-top: 6rem;
+        }
+
+        .close-icon {
+            position: absolute;
+            right: 9px;
+            top: 70px;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+
+        .secCar,
+        #secCar {
+            background: rgba(0, 0, 0, .7);
+        }
+
+        button {
+            border: none;
+        }
+
+        .btn button {
+            border: none;
+            background: none;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .text-link button {
+            font-size: 0.7rem;
+            background: none;
+            color: #0072bc;
+            text-transform: uppercase;
+            text-decoration: underline;
+        }
+
+        .testimonial-popup {
+            display: flex;
+            width: 90%;
+            margin: 0px auto;
+            margin-top: 4.5rem;
+            background-color: #fff;
+        }
+
+        .testimonial-popup .close-icon {
+            color: #fff;
+            font-size: 1.2rem;
+            top: 35px;
+            right: 30px;
+        }
+
+        .main-wrappopup h3 span {
+            display: inline;
+        }
+
+        .testimonial-popup h3 {
+            font-family: "AllianzSansBold";
+            color: #9f9f9f;
+            font-size: 30px;
+            text-align: center;
+            float: left;
+            width: 100%;
+            padding-bottom: 20px;
+        }
+
+        .testimonial-popup .content-part {
+            float: left;
+            width: 100%;
+            font-size: 0;
+        }
+
+        .testimonial-popup .left-part {
+            display: inline-block;
+            vertical-align: middle;
+            width: 30%;
+            margin: 0 auto;
+            text-align: center;
+            padding-right: 5%;
+        }
+
+        .testimonial-popup .left-part span {
+            display: block;
+            max-width: 130px;
+            height: auto;
+            margin: 0 auto 10px;
+        }
+
+        .testimonial-popup .left-part span img {
+            max-width: 100%;
+        }
+
+        .testimonial-popup .right-part {
+            display: inline-block;
+            vertical-align: middle;
+            width: 70%;
+        }
+
+        .testimonial-popup p {
+            color: #333;
+            font-size: 1rem;
+            line-height: 24px;
+        }
+
+        .amp-carousel-button-prev {
+            background: url(/prev.svg) no-repeat;
+            position: absolute;
+            left: -8px;
+        }
+
+        .amp-carousel-button-next {
+            background: url(/next.svg) no-repeat;
+            position: absolute;
+            right: -27px;
+        }
+
+        .amp-carousel-button:focus {
+            border: none;
+        }
+
+        .bg-blue {
+            background-color: #0072bc;
+            padding: 2rem 0rem;
+        }
+
+        .section-header {
+            margin-bottom: 30px;
+        }
+
+        .text-white {
+            color: #fff;
+        }
+
+        .heading {
+            text-align: center;
+            color: white;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 27px;
+            margin: 0px;
+        }
+
+        .tapHeader {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .innerData [option] {
+            display: none
+        }
+
+        .innerData [option][selected] {
+            display: block;
+        }
+
+        .plans-nav {
+            /* background-color: #fff; */
+            position: relative;
+            color: #ffffff;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 18px;
+            max-width: 150px;
+            font-weight: bold;
+            border-radius: 10px;
+            margin-bottom: 10px
+        }
+
+        .icon-md {
+            width: 55px;
+            height: 55px;
+        }
+
+        .plans-nav[selected] {
+            background-color: #fff;
+        }
+
+
+        .icon-term-insurance {
+            background: url(/termins.svg) no-repeat left top;
+            margin: 0px auto 10px;
+            background-size: 100%;
+        }
+
+        .plans-nav p {
+            font-size: 12px;
+        }
+
+        .plans-nav[selected] p {
+            color: #0273bc;
+        }
+
+        .plans-nav:after[select] {
+            content: "";
+            position: absolute;
+            border-top: 12px solid #fff;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            bottom: -10px;
+            left: 0;
+            right: 0;
+            width: 0;
+            margin: 0 auto;
+        }
+
+        .plans-nav img {
+            width: 40px;
+            margin: 0 auto 0px;
+        }
+
+        .icon-ulip-plan {
+            background: url(/ulicolor.svg) no-repeat left top;
+            margin: 0px auto 10px;
+            background-size: 100%;
+        }
+
+        .icon-retirement-plan {
+            background: url(/retcolor.svg) no-repeat left top;
+            margin: 0px auto 10px;
+            background-size: 100%;
+        }
+
+        .icon-ulip-plan img,
+        .icon-retirement-plan img {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="testimonials">
+        <div class="container clearfix"> <amp-carousel width="100" hight="105" layout="responsive" type="slides">
+                <div class="testimonial-block">
+                    <h3>Investment <br><span class="color-highlight-blue">Update</span> </h3>
+                    <div class="testimonial-img"> <img
+                            data-src="https://www.bajajallianzlife.com/content/dam/balic/index/investment-updates.png"
+                            src="https://www.bajajallianzlife.com/content/dam/balic/index/investment-updates.png">
+                    </div>
+                    <div class="text">
+                        <div class="middle-part">
+                            <p>Monthly Fund Performance - March 2023</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-btn"><a href="/content/dam/balic/pdf/fund-pro.pdf"
+                            class="btn clientblog">Know more</a></div>
+                </div>
+                <div class="testimonial-block">
+                    <h3>Trending <br><span class="color-highlight-blue">@ Bajaj Allianz Life</span> </h3>
+                    <div class="position-relative">
+                        <div class="testimonial-img"> <img
+                                data-src="https://www.bajajallianzlife.com/content/dam/balic/video-thumb/solvency-ratio-2022.png"
+                                src="https://www.bajajallianzlife.com/content/dam/balic/video-thumb/solvency-ratio-2022.png"
+                                class="lazy" alt="Trending @ Bajaj Allianz Life"
+                                title="Bajaj Allianz Life | Solvency Ratio 2022"> </div>
+                        <button class="play-btn" on="tap:secCar"> <a class="video-icons video-links" href="javascript:;"
+                                data-url="https://www.youtube.com/embed/29P32mwLCyE?rel=0" tabindex="0"></a> </button>
+                        <amp-lightbox class="secCar" id="secCar" layout="nodisplay">
+                            <div class="" on="tap:my-lightbox.close" role="button" tabindex="0">
+                                <div class="youtubePlay"> <amp-youtube width="90" height="100"
+                                        style="border: 4px solid white;" layout="responsive" data-videoid="9g2i3aTK4SE">
+                                    </amp-youtube> </div>
+                                <a href="javascript:;" on="tap:secCar.hide" class="close-icon">X</a>
+                            </div>
+                        </amp-lightbox>
+                    </div>
+                    <div class="text">
+                        <div class="middle-part">
+                            <p>Bajaj Allianz Life | Solvency Ratio 2022</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-btn">
+                        <a href="javascript:;" data-url="https://www.youtube.com/embed/29P32mwLCyE?rel=0"
+                            class="btn watch video-links" rel="nofollow" tabindex="0"><button on="tap:secCar">Watch
+                                Video </button></a>
+                    </div>
+                </div>
+                <div class="testimonial-block">
+                    <h3>Happy <span class="color-highlight-blue">Smart Assist Clients</span></h3>
+                    <div class="testimonial-img"><img
+                            data-src="https://www.bajajallianzlife.com/content/dam/balic/index/rahul-kendre-homepage.png"
+                            src="https://www.bajajallianzlife.com/content/dam/balic/index/rahul-kendre-homepage.png"
+                            class="lazy" alt="Happy life goal clients" title="Please Enter Title">
+                    </div>
+                    <div class="text">
+                        <div class="middle-part">
+                            <p class="quotes-icon">It is nice initiative taken by Bajaj
+                                Allianz Life company, great experience to connect virtually wit<span
+                                    class="moreelipses">...</span><span class="morecontent"><span>th sales
+                                        person</span></span></p>
+                            <p class="person-name"></p>
+                            <a href="javascript:;" class="text-link popupTestimonialLinkClient"><button
+                                    on="tap:my-lightbox">Read More</button></a>
+                            <amp-lightbox id="my-lightbox" class="secCar" layout="nodisplay">
+                                <div on="tap:my-lightbox.close" role="button" tabindex="0">
+                                    <div class="testimonial-popup">
+                                        <a href="javascript:;" class="close-icon">X</a>
+                                        <div class="main-wrappopup">
+                                            <h3>Happy <span class="color-highlight-blue">Smart Assist Clients</span>
+                                            </h3>
+                                            <div class="content-part">
+                                                <div class="left-part"><span><img
+                                                            data-src="https://www.bajajallianzlife.com/content/dam/balic/index/rahul-kendre-homepage.png"
+                                                            src="https://www.bajajallianzlife.com/content/dam/balic/index/rahul-kendre-homepage.png"
+                                                            class="lazy" alt="Happy life goal clients"
+                                                            title="Please Enter Title" data-loaded="true"></span>
+                                                    <h4></h4>
+                                                </div>
+                                                <div class="right-part">
+                                                    <p>It is nice initiative taken by Bajaj Allianz Life company, great
+                                                        experience to connect virtually with sales person.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </amp-lightbox>
+                        </div>
+                    </div>
+                    <div class="testimonial-btn"><a
+                            href="https://www.bajajallianzlife.com/smart-assist-testimonial.html" class="btn">View
+                            all</a></div>
+                </div>
+            </amp-carousel>
+        </div>
+    </section>
+
+    <section class="life-insurance-plans bg-blue">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="heading text-white">Life Insurance Plans</h1>
+            </div>
+            <div class="life-insurance-slider-nav">
+                <amp-selector class="tapHeader" layout="container"
+                    on="select:innerForm.toggle(index=event.targetOption,value=true)">
+                    <div class="plans-nav" option="0" selected>
+                        <div class="icon icon-md icon-term-insurance">
+                            <img class="default-img lazy"
+                                data-src="/content/dam/balic/homepage/icons/term-insurance.svg"
+                                src="https://www.bajajallianzlife.com/content/dam/balic/term/loader.svg"
+                                title="Term Insurance" alt="Term Insurance">
+                        </div>
+                        <p>Term Insurance</p>
+                    </div>
+                    <div class="plans-nav" option="1">
+                        <div class="icon icon-md icon-ulip-plan">
+                            <img class="default-img lazy" data-src="/uli.svg" src="/uli.svg" title="Term Insurance"
+                                alt="Term Insurance">
+                        </div>
+                        <p>ULIP Plans</p>
+                    </div>
+                    <div class="plans-nav" option="2">
+                        <div class="icon icon-md icon-retirement-plan">
+                            <img class="default-img lazy" data-src="/ret.svg" src="/ret.svg" title="Term Insurance"
+                                alt="Term Insurance">
+                        </div>
+                        <p>Retirement Plans</p>
+                    </div>
+                </amp-selector>
+                <amp-selector class="innerData" id="innerForm" layout="container">
+                    <div option selected>Option A</div>
+                    <div option>Option B</div>
+                    <div option>Option C</div>
+                </amp-selector>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

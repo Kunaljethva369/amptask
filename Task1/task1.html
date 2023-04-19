@@ -1,0 +1,385 @@
+<!doctype html>
+<html ⚡>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="canonical" href="index.html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+    </style><noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
+    </noscript>
+    <style amp-custom>
+        .container {
+            padding: 0px 10px;
+        }
+
+        .container-accordian {
+            padding: 30px 10px;
+        }
+
+        .heading {
+            text-align: center;
+            color: #8E8E8E;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 36px;
+        }
+
+        .orange-text {
+            color: #f58220;
+        }
+
+        .tools-slide {
+            background: #fff;
+            border: 1px solid rgba(151, 151, 151, 0.2);
+            border-radius: 20px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04),
+                0px 2px 6px rgba(0, 0, 0, 0.04),
+                0px 0px 1px rgba(0, 0, 0, 0.04);
+            position: relative;
+            text-align: center;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            -ms-border-radius: 20px;
+            -o-border-radius: 20px;
+            margin-bottom: 20px;
+            transition: max-height 0.25s ease-out;
+        }
+
+        .tools-slide .caption h4 {
+            color: #0072bc;
+            font-family: AllianzSans;
+            margin: 20px 0 0;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 25px;
+        }
+
+        a {
+            text-decoration: none;
+            outline: 0;
+            color: #0062a8;
+            cursor: pointer;
+        }
+
+        .ba-plus-link {
+            position: absolute;
+            margin: 0 auto;
+            left: calc(50% - 41px);
+            bottom: 20px;
+            border: none;
+            background: none;
+        }
+
+        .accordianTitle {
+            display: block;
+            color: #fff;
+            font-size: 1.2rem;
+            padding: 10px;
+            margin: 10px 0;
+            float: left;
+            width: 90%;
+            margin: 0;
+            background: #0072bc;
+        }
+
+        .accordianTitle:after {
+            content: '';
+            height: 8px;
+            width: 8px;
+            display: block;
+            border: 3px solid #fff;
+            border-top-width: 3px;
+            border-right-width: 3px;
+            border-top-width: 3px;
+            border-right-width: 3px;
+            border-right-width: 0;
+            border-top-width: 0;
+            top: 50%;
+            -webkit-transform: rotate(-45deg) translateY(-50%);
+            transform: rotate(-45deg) translateY(-50%);
+            -ms-transform: rotate(-45deg) translateY(-50%);
+            -o-transform: rotate(-45deg) translateY(-50%);
+            position: absolute;
+            right: 15px;
+            margin-top: -3px;
+        }
+
+        .accordianTitletx:before {
+            content: '';
+            height: 8px;
+            width: 8px;
+            display: block;
+            border: 3px solid #2ac9ff;
+            border-top-width: 3px;
+            border-right-width: 3px;
+            border-right-width: 0;
+            border-top-width: 0;
+            top: 50%;
+            -webkit-transform: rotate(-45deg) translateY(-50%);
+            -moz-transform: rotate(-45deg);
+            transform: rotate(136deg);
+            -ms-transform: rotate(-45deg) translateY(-50%);
+            -o-transform: rotate(-45deg) translateY(-50%);
+            position: absolute;
+            right: 15px;
+            margin-top: -3px;
+        }
+
+        .accordianTitletx {
+            color: #2ac9ff;
+            background: transparent;
+            border: none;
+            padding: 0.5rem 0.2rem;
+            font-size: 0.9rem;
+        }
+
+        .caracc {
+            padding: 0rem 0.2rem;
+        }
+
+        @media (max-width: 992px) {
+            .heading {
+                font-size: 27px;
+            }
+
+            .tools-slide {
+                padding: 10px 15px;
+                max-height: 170px;
+                min-height: 160px;
+            }
+
+            .tools-slide-sec {
+                width: 75%;
+            }
+
+            .tools-slide-sec-inner-car {
+                width: 97%;
+            }
+
+            .amp-carousel-button.amp-carousel-button-prev {
+                background: url(/leftarrow.svg) no-repeat 0 0;
+                border: none;
+                position: absolute;
+                left: -5px;
+            }
+
+            .amp-carousel-button.amp-carousel-button-next {
+                background: url(/nextarrow.svg) no-repeat 0 0;
+                border: none;
+                position: absolute;
+                right: -25px;
+            }
+
+            .ba-plus-link img {
+                position: fixed;
+                z-index: 99;
+            }
+
+            #hidenContent {
+                /* display: none; */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3 class="heading">Easy to use Tools &amp; Calculators to plan
+            for your <span class="orange-text">Life Goals!</span>
+        </h3>
+        <div class="slick-list">
+            <amp-carousel width="100" height="100" layout="responsive" type="slides">
+                <div class="tools-slide">
+                    <img class="lazy" height="45px" width="75px" src="/cal.svg" data-src="/cal.svg"
+                        alt="Life Goal Calculator ">
+                    <div class="caption">
+                        <h4>Life Goal Calculator</h4>
+                    </div>
+                    <p id="hidenContent">Invest today to accumulate the wealth for
+                        your future Life Goals.</p>
+                    <button on="tap:hidenContent.toggleVisibility" class="ba-plus-link">
+                        <img src="https://www.bajajallianzlife.com/content/dam/balic/homepage/icons/plus.png"
+                            data-src="https://www.bajajallianzlife.com/content/dam/balic/homepage/icons/plus.png"></button>
+
+                </div>
+                <div class="tools-slide">
+                    <img class="lazy" height="45px" width="75px" src="/childcal.svg" data-src="/childcal.svg"
+                        alt="Child Education Planning Tool">
+                    <div class="caption">
+                        <h4>Child Education Planning Tool</h4>
+                    </div>
+                    <p id="hidenContent2">Invest today to accumulate the wealth for
+                        your future Life Goals.</p>
+                    <button on="tap:hidenContent2.toggleVisibility" class="ba-plus-link">
+                        <img src="https://www.bajajallianzlife.com/content/dam/balic/homepage/icons/plus.png"
+                            data-src="https://www.bajajallianzlife.com/content/dam/balic/homepage/icons/plus.png"></button>
+                </div>
+                <div class="tools-slide">
+                    <img class="lazy" height="45px" width="75px" src="/goalcal.svg" data-src="/goalcal.svg"
+                        alt="Term Insurance Calculator">
+                    <div class="caption">
+                        <h4>Term Insurance Calculator</h4>
+                    </div>
+                </div>
+                <div class="tools-slide">
+                    <img class="lazy" height="45px" width="75px" src="/spend.svg" data-src="/spend.svg"
+                        alt="Savings Life Goals">
+                    <div class="caption">
+                        <h4>Savings to Life Goals Convertor</h4>
+                    </div>
+                </div>
+            </amp-carousel>
+        </div>
+    </div>
+
+    <div class="container-accordian">
+        <amp-accordion animate expand-single-section>
+            <section expanded>
+                <h6 class="accordianTitle iconic-our-plans">
+                    Our Plans
+                </h6>
+                <div>
+                    <amp-carousel width="100" height="100" layout="responsive" type="slides">
+                        <div class="tools-slide tools-slide-sec">
+                            <img class="lazy" height="45px" width="75px" src="/cal.svg" data-src="/cal.svg"
+                                alt="Life Goal Calculator ">
+                            <div class="caption">
+                                <h4>Life Goal Calculator</h4>
+                            </div>
+                            <p id="hidenContent">Invest today to accumulate the wealth for
+                                your future Life Goals.</p>
+                            <button on="tap:hidenContent.toggleVisibility" class="ba-plus-link">
+                                <img src="https://www.bajajallianzlife.com/content/dam/balic/homepage/icons/plus.png"
+                                    data-src="https://www.bajajallianzlife.com/content/dam/balic/homepage/icons/plus.png"></button>
+
+                        </div>
+                        <div class="tools-slide tools-slide-sec">
+                            <img class="lazy" height="45px" width="75px" src="/cal.svg" data-src="/cal.svg"
+                                alt="Life Goal Calculator ">
+                            <div class="caption">
+                                <h4>Life Goal Calculator</h4>
+                            </div>
+                            <p id="hidenContent">Invest today to accumulate the wealth for
+                                your future Life Goals.</p>
+                            <button on="tap:hidenContent.toggleVisibility" class="ba-plus-link">
+                                <img src="https://www.bajajallianzlife.com/content/dam/balic/homepage/icons/plus.png"
+                                    data-src="https://www.bajajallianzlife.com/content/dam/balic/homepage/icons/plus.png"></button>
+
+                        </div>
+                    </amp-carousel>
+                </div>
+            </section>
+            <section>
+                <h6 class="accordianTitle iconic-our-plans">
+                    Benefits of Life Insurance
+                </h6>
+                <div>
+                    <amp-accordion animate expand-single-section>
+                        <section expanded class="tools-slide-sec-inner-car">
+                            <h2 class="accordianTitletx">Benefits of Life Insurance</h2>
+                            <p class="caracc">The 1st step to achieving your Life Goals is to literally have to describe
+                                the goal and
+                                your life in a great deal of detail. Once your life goals are defined, the next step is
+                                creating a plan to get there. Achieving life goals is a long and complex process. Based
+                                on your knowledge of what it will take to achieve your goal, the next step is to break
+                                it down into smaller components.</p>
+                        </section>
+                        <section class="tools-slide-sec-inner-car">
+                            <h2 class="accordianTitletx">Tax Benefits</h2>
+                            <p class="caracc">Life insurance policy offers you tax saving benefits under section 80C of
+                                the Income Tax
+                                Act, 1961. Under this Act, the premiums paid towards a life insurance policy are allowed
+                                as tax deductions from your taxable income up to the tune of INR 1.5 lacs every year.
+                                The payout of a life insurance policy, if any, may also be exempt from taxation.</p>
+                        </section>
+                        <section class="tools-slide-sec-inner-car">
+                            <h2 class="accordianTitletx">They help with loans</h2>
+                            <p class="caracc">With a life insurance policy you stand to receive two loan-related
+                                benefits. The first is
+                                that if you meet with an untimely demise, your life insurance plan will safeguard your
+                                loved ones from any mortgages you may have, such as home loans, etc.
+
+                                In case of a financial crunch, instead of surrendering your policy mid-way through your
+                                goal realization, you can easily avail loans by putting your life insurance policy up as
+                                a collateral. You can take a loan against the surrender value of your life insurance
+                                policy. This is applicable for certain types of Life Insurance products.</p>
+                        </section>
+
+                    </amp-accordion>
+                </div>
+            </section>
+        </amp-accordion>
+    </div>
+</body>
+
+</html>
